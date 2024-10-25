@@ -6,37 +6,30 @@ const imageButtonContainer = document.getElementById('imageButtonContainer');
 const showImageButton = document.getElementById('showImageButton');
 const imageContainer = document.getElementById('imageContainer');
 const content = document.querySelector('.content');
-
 const closeImageButton = document.getElementById('closeImageButton');
-// Al hacer clic en el botón para reproducir el video
+
+// Función para iniciar el video
 playVideoButton.addEventListener('click', () => {
-    content.classList.add('hidden');  // Ocultar el título y el párrafo
-    videoContainer.classList.remove('hidden');  // Mostrar el video en pantalla completa
-    video.play();  // Reproducir el video
+    content.classList.add('hidden');  
+    videoContainer.classList.remove('hidden');  
+    video.play();  
 });
 
-// Detectar cuando el video termina
+// Al finalizar el video
 video.addEventListener('ended', () => {
-    videoContainer.classList.add('hidden');  // Ocultar el video cuando termina
-    imageButtonContainer.classList.remove('hidden');  // Mostrar el botón para ver la imagen
+    videoContainer.classList.add('hidden');  
+    imageButtonContainer.classList.remove('hidden');  
 });
 
-// Al hacer clic en el botón para mostrar la imagen
+// Mostrar imagen al hacer clic en el botón
 showImageButton.addEventListener('click', () => {
-    imageContainer.classList.remove('hidden');  // Mostrar la imagen
-    imageButtonContainer.classList.add('hidden');  // Ocultar el botón de mostrar imagen
+    imageContainer.classList.remove('hidden');  
+    imageButtonContainer.classList.add('hidden');  
 });
 
-// Al hacer clic en el botón para reproducir el video
-playVideoButton.addEventListener('click', () => {
-    content.classList.add('hidden');  // Ocultar el título y el párrafo
-    videoContainer.classList.remove('hidden');  // Mostrar el video en pantalla completa
-    video.play();  // Reproducir el video
-});
-
-// Al hacer clic en el botón para cerrar la imagen
+// Al cerrar la imagen
 closeImageButton.addEventListener('click', () => {
-    imageContainer.classList.add('hidden');  // Ocultar la imagen
-    content.classList.remove('hidden');  // Mostrar de nuevo el contenido inicial (título y párrafo)
-    playVideoButton.classList.remove('hidden');  // Volver a mostrar el botón de abrir video
+    imageContainer.classList.add('hidden');  
+    content.classList.remove('hidden');  
+    playVideoButton.classList.remove('hidden');
 });
