@@ -69,3 +69,22 @@ video, img {
     object-fit: cover;
 }
 
+#buttonContainer {
+    display: flex;
+    justify-content: center; /* Centra ambos botones horizontalmente */
+    text-align: center;
+}
+
+#googleMapsButton {
+    margin-top: 10px; /* Añadir espacio entre la imagen y el botón */
+    padding: 10px 20px;
+    background-color: #ff6f47; /* Color de fondo de los botones */
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    display: block; /* Asegurar que el botón ocupe toda la línea debajo de la imagen */
+    margin-left: auto;
+    margin-right: auto; /* Centrará el botón debajo de la imagen */
+}
+

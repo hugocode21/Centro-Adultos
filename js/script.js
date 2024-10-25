@@ -27,9 +27,11 @@ showImageButton.addEventListener('click', () => {
     imageButtonContainer.classList.add('hidden');  
 });
 
-// Al cerrar la imagen
-closeImageButton.addEventListener('click', () => {
-    imageContainer.classList.add('hidden');  
-    content.classList.remove('hidden');  
-    playVideoButton.classList.remove('hidden');
+
+// Obtener el botón de Google Maps
+const googleMapsButton = document.getElementById('googleMapsButton');
+
+// Al hacer clic en el botón para ir a Google Maps
+googleMapsButton.addEventListener('click', () => {
+    window.open("https://www.google.com/maps?q=CEPER Generación del 27", "_blank");  // Abre Google Maps en una nueva pestaña
 });
